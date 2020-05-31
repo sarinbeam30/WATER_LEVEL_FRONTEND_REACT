@@ -13,7 +13,7 @@ import ContentTestingLine from './components/ContentTestingLine'
 import Slider from './components/Slider'
 import './slide.css'
 
-import {  BrowserRouter, Switch, Route } from 'react-router-dom'
+import {  BrowserRouter, Switch, Route, HashRouter } from 'react-router-dom'
 
 
 //The mockup pages like MockupGreenBar, MockupRedBar are not really used
@@ -26,11 +26,12 @@ export default function App() {
     <div>
       <Header/>
       <Menu/>
-      <BrowserRouter>
+
+      <HashRouter>
        <Switch>
         <Route path="/ContentAllBar" component={ContentAllBar} />
         <Route path="/ContentAllLine" component={ContentAllLine} />
-        <Route exact path="/ContentHome" component={ContentHome} />
+        <Route exact path="/" component={ContentHome} />
         <Route path="/ContentOneBar" component={ContentOneBar} />
         <Route path="/ContentOneLine" component={ContentOneLine} />
         <Route path="/Slider" component={Slider} />
@@ -42,7 +43,8 @@ export default function App() {
 
 
       </Switch>
-      </BrowserRouter>,
+      </HashRouter>
+      ,
       <Footer/>
     </div>
   )

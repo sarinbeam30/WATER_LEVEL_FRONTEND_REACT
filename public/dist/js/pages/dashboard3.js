@@ -31,7 +31,7 @@ function calculate_avg_of_water_level(json, json_length, location, date, )
   }
 
   average = (sum)/(length_mem)
-  return average
+  return average.toFixed(3)
 }
 
 function create_the_water_list(avg_num_1, avg_num_2, data_set){
@@ -85,7 +85,7 @@ function add_date_label(){
 
   //--------------------------------------------  BANGKAPI --------------------------------------------
   var avg_bangkapi_29_05_2020 = calculate_avg_of_water_level(json_output, json_length, 'BANGKAPI', '29/05/2020');
-  console.log("AVG_BANG_29 : " + avg_bangkapi_29_05_2020);
+  // console.log("AVG_BANG_29 : " + avg_bangkapi_29_05_2020);
   var avg_bangkapi_30_05_2020 = calculate_avg_of_water_level(json_output, json_length, 'BANGKAPI', '30/05/2020');
   var WATER_LEVEL_DATA_LIST_BANGKAPI = create_the_water_list(avg_bangkapi_29_05_2020, avg_bangkapi_30_05_2020, DATA_SET_BANGKAPI);
   

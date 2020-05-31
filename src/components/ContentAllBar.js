@@ -1,10 +1,39 @@
-import React from 'react'
+import React, { Component } from 'react'
+const django_url = 'http://django-env.eba-cwpa3c9w.ap-southeast-1.elasticbeanstalk.com';
 
-export default function ContentAllBar() {
-    return (
+class ContentAllBar extends Component {
+  constructor(props){
+    super(props)
+    this.loadData = this.loadData.bind(this);
+  }
+
+  state = {
+    water_level : [],
+  }
+
+  componentDidMount() {
+    this.loadData();
+    //every 10s
+    setInterval(this.loadData, 10000);
+  }
+
+  async loadData() {
+    try {
+      const res = await fetch(django_url);
+      const water_level = await res.json();
+      this.setState({ water_level });
+      // console.log("KO DO NOI : " + JSON.parse(water_level));
+
+    } catch (e) {
+      console.log("ERROR : " + e);
+    }
+  }
+
+  render() {
+      return (
         <div className="content-wrapper" style={{minHeight: '1203.6px'}}>
-  {/* Content Header (Page header) */}
-  <div className="content-header">
+    {/* Content Header (Page header) */}
+    <div className="content-header">
     <div className="container-fluid">
       <div className="row mb-2">
         <div className="col-sm-6">
@@ -18,10 +47,10 @@ export default function ContentAllBar() {
         </div>{/* /.col */}
       </div>{/* /.row */}
     </div>{/* /.container-fluid */}
-  </div>
-  {/* /.content-header */}
-  {/* Main content */}
-  <div className="content">
+    </div>
+    {/* /.content-header */}
+    {/* Main content */}
+    <div className="content">
     <div className="container-fluid">
       <div className="row">
         <div className="col-lg-6">
@@ -45,14 +74,14 @@ export default function ContentAllBar() {
                   <span className="text-muted">rising</span>
                 </p>
               </div> */}
-
+    
               {/* /.d-flex */}
               <div className="position-relative mb-4"><div className="chartjs-size-monitor"><div className="chartjs-size-monitor-expand"><div className /></div><div className="chartjs-size-monitor-shrink"><div className /></div></div>
                 <canvas id="Allsensor-Barchart" height={250} width={592} className="chartjs-render-monitor" style={{display: 'block', height: 200, width: 474}} />
               </div>
-
-
-
+    
+    
+    
               
               <div className="d-flex flex-row justify-content-end">
                 <span className="mr-2">
@@ -78,89 +107,49 @@ export default function ContentAllBar() {
               <table className="table table-striped table-valign-middle">
                 <thead>
                   <tr>
-                    <th>Height (cm)</th>
-                    <th>Date</th>
-                    <th>Time</th>
+                    <th>SENSOR</th>
+                    <th>WATER LEVEL ( %)</th>
+                    <th>LOCATION</th>
+                    <th>Date && Time</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>                      
-                      120
-                    </td>
-                    
-                    <td>
-                      12/02/2020
-                    </td>
-                    <td>
-                    9:00 am standard time
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      
-                      170 
-                    </td>
-                    
-                    <td>
-                    11/02/2020
-                    </td>
-                    <td>
-                    9:00 am standard time
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                     
-                      140
-                    </td>
-                    
-                    <td>
-                    11/02/2020
-                    </td>
-                    <td>
-                    9:00 am standard time
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      110
-                    </td>
-                    
-                    <td>
-                    12/02/2020
-                    </td>
-                    <td>
-                    9:00 am standard time
-                    </td>
-                  </tr>
+                {
+                    this.state.water_level.slice(-5).reverse().map(item => (
+                      <tr key={item.id}>
+                        <td>{item.sensor}</td>
+                        <td>{item.water_level}</td>
+                        <td>{ item.location }</td>
+                        <td>{ item.date_and_time }</td>
+                      </tr>
+                    ))
+                }
                 </tbody>
               </table>
             </div>
-         
+        
           {/* /.card */}          
         </div>
         {/* /.col-md-6 */}
-
-
-
-
-
+    
+    
+    
+    
+    
         
       </div>
       {/* /.row */}
     </div>
     {/* /.container-fluid */}
-  </div>
-  {/* /.content */}
-</div>
-
-
-
-
-
-       
-
-
+    </div>
+    {/* /.content */}
+    </div>
     )
+
+
+  }
+
+
 }
+
+export default ContentAllBar;
