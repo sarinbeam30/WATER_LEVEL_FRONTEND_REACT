@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/WATER_LEVEL_FRONTEND_REACT/static/css/main.993ffef9.chunk.css",
+    "main.js": "/WATER_LEVEL_FRONTEND_REACT/static/js/main.027ed13e.chunk.js",
+    "main.js.map": "/WATER_LEVEL_FRONTEND_REACT/static/js/main.027ed13e.chunk.js.map",
+    "runtime-main.js": "/WATER_LEVEL_FRONTEND_REACT/static/js/runtime-main.58f47279.js",
+    "runtime-main.js.map": "/WATER_LEVEL_FRONTEND_REACT/static/js/runtime-main.58f47279.js.map",
+    "static/css/2.f1d904fc.chunk.css": "/WATER_LEVEL_FRONTEND_REACT/static/css/2.f1d904fc.chunk.css",
+    "static/js/2.f8ebf89b.chunk.js": "/WATER_LEVEL_FRONTEND_REACT/static/js/2.f8ebf89b.chunk.js",
+    "static/js/2.f8ebf89b.chunk.js.map": "/WATER_LEVEL_FRONTEND_REACT/static/js/2.f8ebf89b.chunk.js.map",
+    "index.html": "/WATER_LEVEL_FRONTEND_REACT/index.html",
+    "precache-manifest.ed338fa0b2a9c0ae5d17b01dabc1a70d.js": "/WATER_LEVEL_FRONTEND_REACT/precache-manifest.ed338fa0b2a9c0ae5d17b01dabc1a70d.js",
+    "service-worker.js": "/WATER_LEVEL_FRONTEND_REACT/service-worker.js",
+    "static/css/2.f1d904fc.chunk.css.map": "/WATER_LEVEL_FRONTEND_REACT/static/css/2.f1d904fc.chunk.css.map",
+    "static/css/main.993ffef9.chunk.css.map": "/WATER_LEVEL_FRONTEND_REACT/static/css/main.993ffef9.chunk.css.map",
+    "static/js/2.f8ebf89b.chunk.js.LICENSE.txt": "/WATER_LEVEL_FRONTEND_REACT/static/js/2.f8ebf89b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.58f47279.js",
+    "static/css/2.f1d904fc.chunk.css",
+    "static/js/2.f8ebf89b.chunk.js",
+    "static/css/main.993ffef9.chunk.css",
+    "static/js/main.027ed13e.chunk.js"
+  ]
+}
