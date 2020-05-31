@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "87735ffdf02ba3ebbdc90ab9404fc3ac",
+    "revision": "22b1dcf9a743f4f699279d31ec37250d",
     "url": "/WATER_LEVEL_FRONTEND_REACT/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/WATER_LEVEL_FRONTEND_REACT/static/css/2.f1d904fc.chunk.css"
   },
   {
-    "revision": "58f1fda7544aceb52a9c",
+    "revision": "bf77f50b55d138620e5a",
     "url": "/WATER_LEVEL_FRONTEND_REACT/static/css/main.993ffef9.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/WATER_LEVEL_FRONTEND_REACT/static/js/2.bae6e557.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "58f1fda7544aceb52a9c",
-    "url": "/WATER_LEVEL_FRONTEND_REACT/static/js/main.a9bddd9a.chunk.js"
+    "revision": "bf77f50b55d138620e5a",
+    "url": "/WATER_LEVEL_FRONTEND_REACT/static/js/main.c264cbb4.chunk.js"
   },
   {
     "revision": "7929328c15be9ec6cf30",
