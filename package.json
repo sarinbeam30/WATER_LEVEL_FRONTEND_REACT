@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^7.1.2",
     "cesium": "^1.69.0",
     "craco-cesium": "^1.2.0",
+    "gh-pages": "^3.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
@@ -17,6 +18,8 @@
     "resium": "^1.11.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "PORT=3006 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

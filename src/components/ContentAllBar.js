@@ -12,15 +12,18 @@ class ContentAllBar extends Component {
   }
 
   componentDidMount() {
+    
     this.loadData();
     //every 10s
     setInterval(this.loadData, 10000);
   }
+  
 
   async loadData() {
     try {
-      const res = await fetch(django_url);
+      const res = await fetch(django_url, {signal: this.abortController.signal} );
       const water_level = await res.json();
+      
       this.setState({ water_level });
       // console.log("KO DO NOI : " + JSON.parse(water_level));
 
@@ -29,7 +32,10 @@ class ContentAllBar extends Component {
     }
   }
 
+  
+
   render() {
+
       return (
         <div className="content-wrapper" style={{minHeight: '1203.6px'}}>
     {/* Content Header (Page header) */}
@@ -76,7 +82,14 @@ class ContentAllBar extends Component {
               </div> */}
     
               {/* /.d-flex */}
-              <div className="position-relative mb-4"><div className="chartjs-size-monitor"><div className="chartjs-size-monitor-expand"><div className /></div><div className="chartjs-size-monitor-shrink"><div className /></div></div>
+
+              <div className="position-relative mb-4">
+                <div className="chartjs-size-monitor">
+                  <div className="chartjs-size-monitor-expand">
+                    <div className="true" /></div>
+                  <div className="chartjs-size-monitor-shrink">
+                <div className /></div>
+              </div>
                 <canvas id="Allsensor-Barchart" height={250} width={592} className="chartjs-render-monitor" style={{display: 'block', height: 200, width: 474}} />
               </div>
     
@@ -151,5 +164,8 @@ class ContentAllBar extends Component {
 
 
 }
+
+
+
 
 export default ContentAllBar;

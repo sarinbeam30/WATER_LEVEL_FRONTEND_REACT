@@ -10,16 +10,16 @@ export default function Header() {
     </li>
 
     <li className="nav-item d-none d-sm-inline-block">
-      <a href="#/ContentHome" className="nav-link">Home</a>
+      <a href="/" className="nav-link">Home</a>
     </li>
     <li className="nav-item d-none d-sm-inline-block">
-      <a href="#/ContentAllBar" className="nav-link">Graph View</a>
+      <a href="/ContentAllBar" className="nav-link">Graph View</a>
     </li>
     <li className="nav-item d-none d-sm-inline-block">
-      <a href="#/Slider" className="nav-link">About the Project</a>
+      <a href="/Slider" className="nav-link">About the Project</a>
     </li>
     <li className="nav-item d-none d-sm-inline-block">
-      <a href="#./ContentAllBar" className="nav-link">TESTING_MY_DUDES</a>
+      <a href="/ContentAllBar" className="nav-link">TESTING_MY_DUDES</a>
     </li>
   </ul>
  

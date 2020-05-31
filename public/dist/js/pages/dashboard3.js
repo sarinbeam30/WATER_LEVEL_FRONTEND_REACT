@@ -4,6 +4,8 @@ var DATA_SET_LADKRABANG = [];
 var DATA_SET_BANGKAPI = [];
 var DATA_SET_LADPRAO = [];
 
+
+
 function httpGet(theUrl)
 {
     var xmlHttp = new XMLHttpRequest();
@@ -66,7 +68,7 @@ function add_date_label(){
   return list;
 }
 
- $(getthedata = function () {
+ $(function () {
   'use strict'
 
   json_output = JSON.parse(httpGet(django_url));
@@ -167,6 +169,7 @@ function add_date_label(){
   })
 
   var $AllsensorBarChart = $('#Allsensor-Barchart')
+  console.log('ALL SENSOR MA YOUNG');
   var $AllsensorBarChart  = new Chart($AllsensorBarChart, {
     type   : 'bar',
     data   : {
@@ -427,7 +430,8 @@ function add_date_label(){
   })
  
   //THIS IS MOCKUP FOR LADPRAO GREEN BAR GRAPH, NOT REALLY USING
-  var $OnesensorBarChartGreen = $('#Onesensor-BarchartGreen')
+  var $OnesensorBarChartGreen = $('#Onesensor-BarchartGreen');
+  console.log('LADPRAO MA YOUNG');
   var OnesensorBarChartGreen  = new Chart($OnesensorBarChartGreen, {
     type   : 'bar',
     data   : {

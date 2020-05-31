@@ -75,7 +75,7 @@ class MockupGreenBar extends Component {
               </p>
             </div> */}
             {/* /.d-flex */}
-            <div className="position-relative mb-4"><div className="chartjs-size-monitor"><div className="chartjs-size-monitor-expand"><div className /></div><div className="chartjs-size-monitor-shrink"><div className /></div></div>
+            <div className="position-relative mb-4"><div className="chartjs-size-monitor"><div className="chartjs-size-monitor-expand"><div className /></div><div className="chartjs-size-monitor-shrink"><div className='' /></div></div>
               <canvas id="Onesensor-BarchartGreen" height={250} width={592} className="chartjs-render-monitor" style={{display: 'block', height: 200, width: 474}} />
             </div>
   

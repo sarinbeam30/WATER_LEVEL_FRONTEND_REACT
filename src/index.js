@@ -6,9 +6,9 @@ import * as serviceWorker from './serviceWorker';
 import { HashRouter, BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
-  <HashRouter>
+  <React.StrictMode>
     <App/>
-  </HashRouter>,
+  </React.StrictMode>,
   document.getElementById('root')
 );
 
