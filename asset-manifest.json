@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/WATER_LEVEL_FRONTEND_REACT/static/css/main.993ffef9.chunk.css",
-    "main.js": "/WATER_LEVEL_FRONTEND_REACT/static/js/main.c264cbb4.chunk.js",
-    "main.js.map": "/WATER_LEVEL_FRONTEND_REACT/static/js/main.c264cbb4.chunk.js.map",
+    "main.js": "/WATER_LEVEL_FRONTEND_REACT/static/js/main.dec71668.chunk.js",
+    "main.js.map": "/WATER_LEVEL_FRONTEND_REACT/static/js/main.dec71668.chunk.js.map",
     "runtime-main.js": "/WATER_LEVEL_FRONTEND_REACT/static/js/runtime-main.58f47279.js",
     "runtime-main.js.map": "/WATER_LEVEL_FRONTEND_REACT/static/js/runtime-main.58f47279.js.map",
     "static/css/2.f1d904fc.chunk.css": "/WATER_LEVEL_FRONTEND_REACT/static/css/2.f1d904fc.chunk.css",
-    "static/js/2.bae6e557.chunk.js": "/WATER_LEVEL_FRONTEND_REACT/static/js/2.bae6e557.chunk.js",
-    "static/js/2.bae6e557.chunk.js.map": "/WATER_LEVEL_FRONTEND_REACT/static/js/2.bae6e557.chunk.js.map",
+    "static/js/2.b01ec22f.chunk.js": "/WATER_LEVEL_FRONTEND_REACT/static/js/2.b01ec22f.chunk.js",
+    "static/js/2.b01ec22f.chunk.js.map": "/WATER_LEVEL_FRONTEND_REACT/static/js/2.b01ec22f.chunk.js.map",
     "index.html": "/WATER_LEVEL_FRONTEND_REACT/index.html",
-    "precache-manifest.9c5463f747702ce3140d83a2abbde796.js": "/WATER_LEVEL_FRONTEND_REACT/precache-manifest.9c5463f747702ce3140d83a2abbde796.js",
+    "precache-manifest.4467723318de2b32df7944d26367d75f.js": "/WATER_LEVEL_FRONTEND_REACT/precache-manifest.4467723318de2b32df7944d26367d75f.js",
     "service-worker.js": "/WATER_LEVEL_FRONTEND_REACT/service-worker.js",
     "static/css/2.f1d904fc.chunk.css.map": "/WATER_LEVEL_FRONTEND_REACT/static/css/2.f1d904fc.chunk.css.map",
     "static/css/main.993ffef9.chunk.css.map": "/WATER_LEVEL_FRONTEND_REACT/static/css/main.993ffef9.chunk.css.map",
-    "static/js/2.bae6e557.chunk.js.LICENSE.txt": "/WATER_LEVEL_FRONTEND_REACT/static/js/2.bae6e557.chunk.js.LICENSE.txt"
+    "static/js/2.b01ec22f.chunk.js.LICENSE.txt": "/WATER_LEVEL_FRONTEND_REACT/static/js/2.b01ec22f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.58f47279.js",
     "static/css/2.f1d904fc.chunk.css",
-    "static/js/2.bae6e557.chunk.js",
+    "static/js/2.b01ec22f.chunk.js",
     "static/css/main.993ffef9.chunk.css",
-    "static/js/main.c264cbb4.chunk.js"
+    "static/js/main.dec71668.chunk.js"
   ]
 }
