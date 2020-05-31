@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "465ac9e8c08fbdc6def0056f729ec54c",
+    "revision": "3ea2fe6f2ca7e245e0138fb1bacafc97",
     "url": "/WATER_LEVEL_FRONTEND_REACT/index.html"
   },
   {
-    "revision": "f12310e27b45e471ce1b",
+    "revision": "9af7259c9e276b2aa5f8",
     "url": "/WATER_LEVEL_FRONTEND_REACT/static/css/2.f1d904fc.chunk.css"
   },
   {
-    "revision": "3263fa361965f3eb6c18",
+    "revision": "921d9e2e8732d761c623",
     "url": "/WATER_LEVEL_FRONTEND_REACT/static/css/main.993ffef9.chunk.css"
   },
   {
-    "revision": "f12310e27b45e471ce1b",
-    "url": "/WATER_LEVEL_FRONTEND_REACT/static/js/2.bae6e557.chunk.js"
+    "revision": "9af7259c9e276b2aa5f8",
+    "url": "/WATER_LEVEL_FRONTEND_REACT/static/js/2.f8ebf89b.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/WATER_LEVEL_FRONTEND_REACT/static/js/2.bae6e557.chunk.js.LICENSE.txt"
+    "url": "/WATER_LEVEL_FRONTEND_REACT/static/js/2.f8ebf89b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3263fa361965f3eb6c18",
-    "url": "/WATER_LEVEL_FRONTEND_REACT/static/js/main.a131b07e.chunk.js"
+    "revision": "921d9e2e8732d761c623",
+    "url": "/WATER_LEVEL_FRONTEND_REACT/static/js/main.250fd882.chunk.js"
   },
   {
     "revision": "7929328c15be9ec6cf30",
