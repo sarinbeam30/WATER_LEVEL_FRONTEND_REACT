@@ -5,12 +5,13 @@ var DATA_SET_BANGKAPI = [];
 var DATA_SET_LADPRAO = [];
 
 
-
 function httpGet(theUrl)
 {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
     xmlHttp.send( null );
+    // console.log("CHECK : " + xmlHttp.responseText);
+    // xmlHttp.responseText;
     // console.log("CHECK : " + xmlHttp.responseText);
     return xmlHttp.responseText;
 }
@@ -71,6 +72,7 @@ function add_date_label(){
  $(function () {
   'use strict'
 
+ 
   json_output = JSON.parse(httpGet(django_url));
   // console.log(json_output[3]['date_and_time']);
 
@@ -78,23 +80,23 @@ function add_date_label(){
   var json_length = json_output.length;
 
   //--------------------------------------------  LADKRABANG -----------------------------------------
-  var avg_ladkrabang_29_05_2020 = calculate_avg_of_water_level(json_output, json_length, 'LADKRABANG', '29/05/2020');
-  var avg_ladkrabang_30_05_2020 = calculate_avg_of_water_level(json_output, 'LADKRABANG', '30/05/2020');
-  var WATER_LEVEL_DATA_LIST_LADKRABANG = create_the_water_list(avg_ladkrabang_29_05_2020,avg_ladkrabang_30_05_2020, DATA_SET_LADKRABANG);
-  // var WATER_LEVEL_DATA_LIST_LADKRABANG = 0;
-  // var WATER_LEVEL_DATA_LIST_BANGKAPI = 0;
-  // var WATER_LEVEL_DATA_LIST_LADPRAO = 0;
+  // var avg_ladkrabang_29_05_2020 = calculate_avg_of_water_level(json_output, json_length, 'LADKRABANG', '29/05/2020');
+  // var avg_ladkrabang_30_05_2020 = calculate_avg_of_water_level(json_output, 'LADKRABANG', '30/05/2020');
+  // var WATER_LEVEL_DATA_LIST_LADKRABANG = create_the_water_list(avg_ladkrabang_29_05_2020,avg_ladkrabang_30_05_2020, DATA_SET_LADKRABANG);
+  var WATER_LEVEL_DATA_LIST_LADKRABANG = 0;
+  var WATER_LEVEL_DATA_LIST_BANGKAPI = 0;
+  var WATER_LEVEL_DATA_LIST_LADPRAO = 0;
 
   //--------------------------------------------  BANGKAPI --------------------------------------------
-  var avg_bangkapi_29_05_2020 = calculate_avg_of_water_level(json_output, json_length, 'BANGKAPI', '29/05/2020');
+  // var avg_bangkapi_29_05_2020 = calculate_avg_of_water_level(json_output, json_length, 'BANGKAPI', '29/05/2020');
   // console.log("AVG_BANG_29 : " + avg_bangkapi_29_05_2020);
-  var avg_bangkapi_30_05_2020 = calculate_avg_of_water_level(json_output, json_length, 'BANGKAPI', '30/05/2020');
-  var WATER_LEVEL_DATA_LIST_BANGKAPI = create_the_water_list(avg_bangkapi_29_05_2020, avg_bangkapi_30_05_2020, DATA_SET_BANGKAPI);
+  // var avg_bangkapi_30_05_2020 = calculate_avg_of_water_level(json_output, json_length, 'BANGKAPI', '30/05/2020');
+  // var WATER_LEVEL_DATA_LIST_BANGKAPI = create_the_water_list(avg_bangkapi_29_05_2020, avg_bangkapi_30_05_2020, DATA_SET_BANGKAPI);
   
   //--------------------------------------------  LADPRAO --------------------------------------------
-  var avg_ladprao_29_05_2020 = calculate_avg_of_water_level(json_output, json_length, 'LADPRAO', '29/05/2020');
-  var avg_ladprao_30_05_2020 = calculate_avg_of_water_level(json_output, json_length, 'LADPRAO', '30/05/2020');
-  var WATER_LEVEL_DATA_LIST_LADPRAO = create_the_water_list(avg_ladprao_29_05_2020, avg_ladprao_30_05_2020, DATA_SET_LADPRAO);
+  // var avg_ladprao_29_05_2020 = calculate_avg_of_water_level(json_output, json_length, 'LADPRAO', '29/05/2020');
+  // var avg_ladprao_30_05_2020 = calculate_avg_of_water_level(json_output, json_length, 'LADPRAO', '30/05/2020');
+  // var WATER_LEVEL_DATA_LIST_LADPRAO = create_the_water_list(avg_ladprao_29_05_2020, avg_ladprao_30_05_2020, DATA_SET_LADPRAO);
   
 
   
