@@ -27,7 +27,7 @@ export default function App() {
       <Header/>
       <Menu/>
 
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <HashRouter >
        <Switch>
          
         {/* GRAPH_VIEW */}
@@ -52,11 +52,9 @@ export default function App() {
         {/* BANGKAPI */}
         <Route path={"/MockupRedBar"} component={MockupRedBar} />
 
-        <Route component={() => (<div>404 Not found </div>)} />
-
 
       </Switch>
-      </BrowserRouter>
+      </HashRouter>
       ,
       <Footer/>
     </div>

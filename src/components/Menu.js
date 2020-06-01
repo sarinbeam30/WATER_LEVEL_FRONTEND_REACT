@@ -4,7 +4,7 @@ export default function Menu() {
     return (
         <aside className="main-sidebar sidebar-dark-primary elevation-4">
   {/* Brand Logo */}
-  <a href="/" className="brand-link">
+  <a href="#/" className="brand-link">
     <img src="dist/img/Waterlevelicon.png" alt="WaterLevel Logo" className="brand-image img-circle elevation-3" style={{opacity: '.8'}} />
     <span className="brand-text font-weight-light">Water Level tracker</span>
   </a>
@@ -28,19 +28,19 @@ export default function Menu() {
           </a>
           <ul className="nav nav-treeview">
             <li className="nav-item">
-              <a href="/ContentOneBar" className="nav-link">
+              <a href="#/ContentOneBar" className="nav-link">
                 <i className="far fa-circle nav-icon" />
                 <p>Ladkrabang</p>
               </a>
             </li>
             <li className="nav-item">
-              <a href="/MockupRedBar" className="nav-link">
+              <a href="#/MockupRedBar" className="nav-link">
                 <i className="far fa-circle nav-icon" />
                 <p>Bangkapi</p>
               </a>
             </li>
             <li className="nav-item">
-              <a href="/MockupGreenBar" className="nav-link">
+              <a href="#/MockupGreenBar" className="nav-link">
                 <i className="far fa-circle nav-icon" />
                 <p>Ladprao</p>
               </a>
