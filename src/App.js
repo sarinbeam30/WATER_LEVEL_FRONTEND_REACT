@@ -27,27 +27,32 @@ export default function App() {
       <Header/>
       <Menu/>
 
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
        <Switch>
          
         {/* GRAPH_VIEW */}
-        <Route path={process.env.PUBLIC_URL + "/ContentAllBar"} component={ContentAllBar} />
-        <Route path={process.env.PUBLIC_URL + "/ContentAllLine"} component={ContentAllLine} />
-        <Route exact path={process.env.PUBLIC_URL + "/"} component={ContentHome} />
+        <Route path="/ContentAllBar" component={ContentAllBar} />
+
+        <Route path={"/ContentAllLine"} component={ContentAllLine} />
+
+        {/* HOME */}
+        <Route exact path={"/"} component={ContentHome} />
 
         {/* LADKRABANG */}
-        <Route path={process.env.PUBLIC_URL + "/ContentOneBar"} component={ContentOneBar} />
+        <Route path={"/ContentOneBar"} component={ContentOneBar} />
 
-        <Route path={process.env.PUBLIC_URL + "/ContentOneLine"} component={ContentOneLine} />
+        <Route path={"/ContentOneLine"} component={ContentOneLine} />
 
         {/* ABOUT_THE_PROJECT */}
-        <Route path={process.env.PUBLIC_URL + "/Slider"} component={Slider} />
-        <Route path={process.env.PUBLIC_URL + "/ContentTestingLine"} component={ContentTestingLine} />
+        <Route path={"/Slider"} component={Slider} />
+        <Route path={"/ContentTestingLine"} component={ContentTestingLine} />
 
         {/* LADPRAO */}
-        <Route path={process.env.PUBLIC_URL + "/MockupGreenBar"} component={MockupGreenBar} />
+        <Route path={"/MockupGreenBar"} component={MockupGreenBar} />
         {/* BANGKAPI */}
-        <Route path={process.env.PUBLIC_URL + "/MockupRedBar"} component={MockupRedBar} />
+        <Route path={"/MockupRedBar"} component={MockupRedBar} />
+
+        <Route component={() => (<div>404 Not found </div>)} />
 
 
       </Switch>

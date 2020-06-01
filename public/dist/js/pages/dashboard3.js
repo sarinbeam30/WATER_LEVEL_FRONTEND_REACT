@@ -5,12 +5,13 @@ var DATA_SET_BANGKAPI = [];
 var DATA_SET_LADPRAO = [];
 
 
-
 function httpGet(theUrl)
 {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
     xmlHttp.send( null );
+    // console.log("CHECK : " + xmlHttp.responseText);
+    // xmlHttp.responseText;
     // console.log("CHECK : " + xmlHttp.responseText);
     return xmlHttp.responseText;
 }
@@ -71,6 +72,7 @@ function add_date_label(){
  $(function () {
   'use strict'
 
+ 
   json_output = JSON.parse(httpGet(django_url));
   // console.log(json_output[3]['date_and_time']);
 

@@ -21,14 +21,14 @@ class ContentAllBar extends Component {
 
   async loadData() {
     try {
-      const res = await fetch(django_url, {signal: this.abortController.signal} );
+      const res = await fetch(django_url );
       const water_level = await res.json();
       
       this.setState({ water_level });
       // console.log("KO DO NOI : " + JSON.parse(water_level));
 
     } catch (e) {
-      console.log("ERROR : " + e);
+      console.log(e);
     }
   }
 
