@@ -13,7 +13,7 @@ import ContentTestingLine from './components/ContentTestingLine'
 import Slider from './components/Slider'
 import './slide.css'
 
-import {  BrowserRouter, Switch, Route, HashRouter, Router } from 'react-router-dom'
+import {  BrowserRouter, Switch, Route, HashRouter, Router, Redirect } from 'react-router-dom'
 
 
 //The mockup pages like MockupGreenBar, MockupRedBar are not really used
@@ -32,6 +32,7 @@ export default function App() {
          
         {/* GRAPH_VIEW */}
         <Route path="/ContentAllBar" component={ContentAllBar} />
+     
 
         <Route path={"/ContentAllLine"} component={ContentAllLine} />
 

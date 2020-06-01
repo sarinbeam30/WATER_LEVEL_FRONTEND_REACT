@@ -89,7 +89,9 @@ class ContentAllBar extends Component {
                     <div className="true" /></div>
                   <div className="chartjs-size-monitor-shrink">
                 <div className /></div>
-              </div>
+                </div>
+
+                <span id="CALL_DATA"></span>
                 <canvas id="Allsensor-Barchart" height={250} width={592} className="chartjs-render-monitor" style={{display: 'block', height: 200, width: 474}} />
               </div>
     
@@ -157,6 +159,8 @@ class ContentAllBar extends Component {
     </div>
     {/* /.content */}
     </div>
+
+    
     )
 
 
