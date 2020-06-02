@@ -5,6 +5,7 @@ class MockupRedBar extends Component {
   constructor(props){
     super(props)
     this.loadData = this.loadData.bind(this);
+    this._isMounted = false;
   }
 
   state = {
@@ -12,16 +13,21 @@ class MockupRedBar extends Component {
   }
 
   componentDidMount() {
+    this._isMounted = true;
     this.loadData();
     //every 10s
     setInterval(this.loadData, 10000);
+  }
+
+  componentWillUnmount() {
+    this._isMounted = false;
   }
 
   async loadData() {
     try {
       const res = await fetch(django_url);
       const water_level = await res.json();
-      this.setState({ water_level });
+      this._isMounted && this.setState({ water_level });
       // console.log("KO DO NOI");
 
     } catch (e) {

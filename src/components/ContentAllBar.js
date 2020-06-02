@@ -1,21 +1,30 @@
 import React, { Component } from 'react'
+import GraphViewChart from './GraphViewChart';
+
+
 const django_url = 'http://django-env.eba-cwpa3c9w.ap-southeast-1.elasticbeanstalk.com';
 
 class ContentAllBar extends Component {
   constructor(props){
     super(props)
     this.loadData = this.loadData.bind(this);
+    this._isMounted = false;
   }
 
   state = {
     water_level : [],
+    chart_data : {}
   }
 
   componentDidMount() {
-    
+    this._isMounted = true;
     this.loadData();
     //every 10s
-    setInterval(this.loadData, 10000);
+    setInterval(this.loadData, 1000);
+  }
+
+  componentWillUnmount() {
+    this._isMounted = false;
   }
   
 
@@ -23,15 +32,14 @@ class ContentAllBar extends Component {
     try {
       const res = await fetch(django_url );
       const water_level = await res.json();
-      
-      this.setState({ water_level });
+      this._isMounted && this.setState({ water_level });
       // console.log("KO DO NOI : " + JSON.parse(water_level));
 
     } catch (e) {
+      console.log('Hello world')
       console.log(e);
     }
   }
-
   
 
   render() {
@@ -91,8 +99,8 @@ class ContentAllBar extends Component {
                 <div className /></div>
                 </div>
 
-                <span id="CALL_DATA"></span>
-                <canvas id="Allsensor-Barchart" height={250} width={592} className="chartjs-render-monitor" style={{display: 'block', height: 200, width: 474}} />
+                <GraphViewChart />
+                {/* <canvas id="Allsensor-Barchart" height={250} width={592} className="chartjs-render-monitor" style={{display: 'block', height: 200, width: 474}} ></canvas> */}
               </div>
     
     
@@ -161,12 +169,13 @@ class ContentAllBar extends Component {
     </div>
 
     
+
+
+
+
+    
     )
-
-
   }
-
-
 }
 
 

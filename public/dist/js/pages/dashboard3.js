@@ -113,9 +113,6 @@ function add_date_label(){
   var WATER_LEVEL_DATA_LIST_LADPRAO = create_the_water_list(avg_ladprao_29_05_2020, avg_ladprao_30_05_2020, DATA_SET_LADPRAO);
   
 
-  
-  
-
 
   var ticksStyle = {
     fontColor: '#495057',
@@ -199,7 +196,7 @@ function add_date_label(){
         {
           backgroundColor: 'blue',
           borderColor    : 'blue',
-          data           : WATER_LEVEL_DATA_LIST_LADKRABANG
+          data           : [30, 40, 50, 60, 70, 80, 90]
         },
         {
           backgroundColor: 'red',
