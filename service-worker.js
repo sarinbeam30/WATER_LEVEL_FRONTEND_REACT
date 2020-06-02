@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/WATER_LEVEL_FRONTEND_REACT/precache-manifest.1220c6de33b310137bb7e1696ffdce73.js"
+  "/WATER_LEVEL_FRONTEND_REACT/precache-manifest.b91533db7a93c38178f462c177f4fe22.js"
 );
 
 self.addEventListener('message', (event) => {
