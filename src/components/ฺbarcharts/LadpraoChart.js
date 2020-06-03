@@ -6,10 +6,9 @@ import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { requestApiData } from "../../actions";
 
-class GraphViewChart extends Component {
-
+class LadpraoChart extends Component {
     componentDidMount(){
-         this.props.requestApiData();
+        this.props.requestApiData();
     }
 
     render(){
@@ -20,47 +19,19 @@ class GraphViewChart extends Component {
                             labels : add_date_label(),
                             datasets : [
                                 {
-                                    label: 'Ladkrabang',
-                                    backgroundColor: 'rgba(43, 96, 222,1)',
+                                    label: 'Ladprao',
+                                    backgroundColor: 'rgba(42, 222, 168, 1)',
                                     borderColor: 'rgba(0,0,0,1)',
                                     borderWidth: 1,
                                     barPercentage: 0.65,
                                     data :[0,0,0,0,0,0,
                                         calculate_avg_of_water_level_new_version(
                                             Array.from(this.props.data)
-                                            .filter(item => item.location === "LADKRABANG" && item.date === "03/06/2020")
-                                            .map(item => (item.water_level))
-                                        )
-                                    ]
-                                },
-                                {
-                                    label: 'Bangkapi',
-                                    backgroundColor: 'rgba(222, 42, 96,1)',
-                                    borderColor: 'rgba(0,0,0,1)',
-                                    borderWidth: 1,
-                                    barPercentage: 0.65,
-                                    data : [0,0,0,0,0,0,
-                                        calculate_avg_of_water_level_new_version(
-                                            Array.from(this.props.data)
-                                            .filter(item => item.location === "BANGKAPI" && item.date === "03/06/2020")
-                                            .map(item => (item.water_level))
-                                        )
-                                    ]
-                                },
-                                {
-                                    label: 'Ladprao',
-                                    backgroundColor: 'rgba(42, 222, 168, 1)',
-                                    borderColor: 'rgba(0,0,0,1)',
-                                    borderWidth: 1,
-                                    barPercentage: 0.65,
-                                    data : [0,0,0,0,0,0,
-                                        calculate_avg_of_water_level_new_version(
-                                            Array.from(this.props.data)
                                             .filter(item => item.location === "LADPRAO" && item.date === "03/06/2020")
                                             .map(item => (item.water_level))
                                         )
                                     ]
-                                }
+                                },                            
                             ]
                         }}
                         options={{
@@ -98,7 +69,7 @@ class GraphViewChart extends Component {
                     />
             </div>
         )
-    }
+    }  
 }
 
 const mapStateToProps = state => ({ data: state.data });
@@ -106,4 +77,4 @@ const mapStateToProps = state => ({ data: state.data });
 const mapDispatchToProps = dispatch =>
   bindActionCreators({ requestApiData }, dispatch);
 
-export default connect(mapStateToProps, mapDispatchToProps)(GraphViewChart);
+export default connect(mapStateToProps, mapDispatchToProps)(LadpraoChart);

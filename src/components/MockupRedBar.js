@@ -1,38 +1,14 @@
 import React, { Component } from 'react'
-const django_url = 'http://django-env.eba-cwpa3c9w.ap-southeast-1.elasticbeanstalk.com';
+import BangkapiChart from './ฺbarcharts/BangkapiChart'
+
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
+import { requestApiData } from "../actions";
 
 class MockupRedBar extends Component {
-  constructor(props){
-    super(props)
-    this.loadData = this.loadData.bind(this);
-    this._isMounted = false;
-  }
-
-  state = {
-    water_level : [],
-  }
-
-  componentDidMount() {
-    this._isMounted = true;
-    this.loadData();
-    //every 10s
-    // setInterval(this.loadData, 10000);
-  }
-
-  componentWillUnmount() {
-    this._isMounted = false;
-  }
-
-  async loadData() {
-    try {
-      const res = await fetch(django_url);
-      const water_level = await res.json();
-      this._isMounted && this.setState({ water_level });
-      // console.log("KO DO NOI");
-
-    } catch (e) {
-      console.log("ERROR : " + e);
-    }
+  
+  async componentDidMount() {
+    await this.props.requestApiData();
   }
 
   render(){
@@ -47,7 +23,7 @@ class MockupRedBar extends Component {
         </div>{/* /.col */}
         <div className="col-sm-6">
           <ol className="breadcrumb float-sm-right">
-            <li className="breadcrumb-item"><a href="./ContentHome">Home</a></li>
+            <li className="breadcrumb-item"><a href="#/">Home</a></li>
             <li className="breadcrumb-item active">viewing Bangkapi's sensor</li>
           </ol>
         </div>{/* /.col */}
@@ -63,7 +39,7 @@ class MockupRedBar extends Component {
           <div className="card">
             <div className="card-header border-0">
               <div className="d-flex justify-content-between">
-                <h3 className="card-title">Water level average</h3>
+                <h3 className="card-title">Water level average ( %)</h3>
                 <a href="javascript:void(0);">Mockup cant Change to linegraph</a>
               </div>
             </div>
@@ -82,7 +58,7 @@ class MockupRedBar extends Component {
               </div> */}
               {/* /.d-flex */}
               <div className="position-relative mb-4"><div className="chartjs-size-monitor"><div className="chartjs-size-monitor-expand"><div className /></div><div className="chartjs-size-monitor-shrink"><div className /></div></div>
-                <canvas id="Onesensor-BarchartRed" height={250} width={592} className="chartjs-render-monitor" style={{display: 'block', height: 200, width: 474}} />
+                <BangkapiChart />
               </div>
     
     
@@ -112,15 +88,19 @@ class MockupRedBar extends Component {
                 <thead>
                   <tr>
                     <th>WATER LEVEL ( %)</th>
-                    <th>Date && Time</th>
+                    <th>Date</th>
+                    <th>Time</th>
                   </tr>
                 </thead>
                 <tbody>
                 {
-                  this.state.water_level.filter(item => item.location === "BANGKAPI").slice(-5).reverse().map(item => (
+                  Array.from(this.props.data)
+                  .filter(item => item.location === "BANGKAPI")
+                  .slice(-5).reverse().map(item => (
                     <tr key={item.id}>
                         <td>{item.water_level}</td>
-                        <td>{ item.date_and_time }</td>
+                        <td>{ item.date }</td>
+                        <td>{ item.time }</td>
                     </tr>
                   ))
                 }
@@ -151,5 +131,10 @@ class MockupRedBar extends Component {
   }
 }
 
-export default  MockupRedBar;
+const mapStateToProps = state => ({ data: state.data });
+
+const mapDispatchToProps = dispatch =>
+  bindActionCreators({ requestApiData }, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(MockupRedBar);
 

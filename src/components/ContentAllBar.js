@@ -6,7 +6,6 @@ import { connect } from "react-redux";
 import { requestApiData } from "../actions";
 
 
-
 class ContentAllBar extends Component {
 
   async componentDidMount(){
@@ -42,7 +41,7 @@ class ContentAllBar extends Component {
           <div className="card">
             <div className="card-header border-0">
               <div className="d-flex justify-content-between">
-                <h3 className="card-title">Water level average</h3>
+                <h3 className="card-title">Water level average ( %)</h3>
                 <a href="./ContentAllLine">Change to linegraph</a>
               </div>
             </div>
@@ -124,10 +123,6 @@ class ContentAllBar extends Component {
           {/* /.card */}          
         </div>
         {/* /.col-md-6 */}
-    
-    
-    
-    
     
         
       </div>

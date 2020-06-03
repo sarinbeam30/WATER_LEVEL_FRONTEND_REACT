@@ -20,7 +20,7 @@ export function add_date_label(){
 } 
 
 
-export function calculate_avg_of_water_level(json, json_length, location, date)
+export function calculate_avg_of_water_level_old_version(json, json_length, location, date)
 {
     var sum = 0;
     var average = 0;
@@ -58,4 +58,18 @@ export function create_the_water_list(avg_num_1, data_set)
 
   // console.log("DATA_SET : " + data_set);
   return data_set;
+}
+
+export function calculate_avg_of_water_level_new_version(num_list)
+{
+  var sum = 0;
+  var avg = 0;
+
+  for(var i=0; i< num_list.length; i++){
+      sum += num_list[i]
+  }
+
+  avg = (sum)/(num_list.length);
+  console.log(avg.toFixed(3));
+  return parseFloat(avg.toFixed(3));
 }
