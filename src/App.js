@@ -21,46 +21,48 @@ import MockupGreenBar from './components/MockupGreenBar'
 import MockupRedBar from './components/MockupRedBar'
 
 //REDUX_STORE
-// import { Provider } from 'react-redux'
-// import store from './Redux/store'
+import store from "./store";
+import { Provider } from "react-redux";
 
 export default function App() {
   return (
-    <div>
-        <Header/>
-        <Menu/>
+    <Provider store={store}>
+          <div>
+            <Header/>
+            <Menu/>
 
-        <HashRouter>
-        <Switch>
+            <HashRouter>
+            <Switch>
+              
+              {/* GRAPH_VIEW */} 
+              <Route path="/ContentAllBar" component={ContentAllBar} />
           
-          {/* GRAPH_VIEW */} 
-          <Route path="/ContentAllBar" component={ContentAllBar} />
-      
 
-          <Route path={"/ContentAllLine"} component={ContentAllLine} />
+              <Route path={"/ContentAllLine"} component={ContentAllLine} />
 
-          {/* HOME */}
-          <Route exact path={"/"} component={ContentHome} />
+              {/* HOME */}
+              <Route exact path={"/"} component={ContentHome} />
 
-          {/* LADKRABANG */}
-          <Route path={"/ContentOneBar"} component={ContentOneBar} />
+              {/* LADKRABANG */}
+              <Route path={"/ContentOneBar"} component={ContentOneBar} />
 
-          <Route path={"/ContentOneLine"} component={ContentOneLine} />
+              <Route path={"/ContentOneLine"} component={ContentOneLine} />
 
-          {/* ABOUT_THE_PROJECT */}
-          <Route path={"/Slider"} component={Slider} />
-          <Route path={"/ContentTestingLine"} component={ContentTestingLine} />
+              {/* ABOUT_THE_PROJECT */}
+              <Route path={"/Slider"} component={Slider} />
+              <Route path={"/ContentTestingLine"} component={ContentTestingLine} />
 
-          {/* LADPRAO */}
-          <Route path={"/MockupGreenBar"} component={MockupGreenBar} />
-          {/* BANGKAPI */}
-          <Route path={"/MockupRedBar"} component={MockupRedBar} />
+              {/* LADPRAO */}
+              <Route path={"/MockupGreenBar"} component={MockupGreenBar} />
+              {/* BANGKAPI */}
+              <Route path={"/MockupRedBar"} component={MockupRedBar} />
 
-        </Switch>
-        </HashRouter>
-        ,
-        <Footer/>
-      </div>
+            </Switch>
+            </HashRouter>
+            ,
+            <Footer/>
+          </div>
+    </Provider>
   )
 }
 

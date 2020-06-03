@@ -1,47 +1,18 @@
 import React, { Component } from 'react'
-import GraphViewChart from './GraphViewChart';
+import GraphViewChart from './ฺbarcharts/GraphViewChart';
+
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
+import { requestApiData } from "../actions";
 
 
-const django_url = 'http://django-env.eba-cwpa3c9w.ap-southeast-1.elasticbeanstalk.com';
 
 class ContentAllBar extends Component {
-  constructor(props){
-    super(props)
-    this.loadData = this.loadData.bind(this);
-    this._isMounted = false;
-  }
 
-  state = {
-    water_level : [],
-    chart_data : {}
-  }
-
-  componentDidMount() {
-    this._isMounted = true;
-    this.loadData();
-    //every 10s
-    setInterval(this.loadData, 1000);
-  }
-
-  componentWillUnmount() {
-    this._isMounted = false;
+  async componentDidMount(){
+    await this.props.requestApiData();
   }
   
-
-  async loadData() {
-    try {
-      const res = await fetch(django_url );
-      const water_level = await res.json();
-      this._isMounted && this.setState({ water_level });
-      // console.log("KO DO NOI : " + JSON.parse(water_level));
-
-    } catch (e) {
-      console.log('Hello world')
-      console.log(e);
-    }
-  }
-  
-
   render() {
 
       return (
@@ -100,12 +71,9 @@ class ContentAllBar extends Component {
                 </div>
 
                 <GraphViewChart />
-                {/* <canvas id="Allsensor-Barchart" height={250} width={592} className="chartjs-render-monitor" style={{display: 'block', height: 200, width: 474}} ></canvas> */}
               </div>
     
     
-    
-              
               <div className="d-flex flex-row justify-content-end">
                 <span className="mr-2">
                   <i className="fas fa-square text-blue" /> Ladkrabang &nbsp; {/* the word primary can be change to any color */}
@@ -133,17 +101,19 @@ class ContentAllBar extends Component {
                     <th>SENSOR</th>
                     <th>WATER LEVEL ( %)</th>
                     <th>LOCATION</th>
-                    <th>Date && Time</th>
+                    <th>Date</th>
+                    <th>Time</th>
                   </tr>
                 </thead>
                 <tbody>
                 {
-                    this.state.water_level.slice(-5).reverse().map(item => (
+                    Array.from(this.props.data).slice(-5).reverse().map(item => (
                       <tr key={item.id}>
                         <td>{item.sensor}</td>
                         <td>{item.water_level}</td>
                         <td>{ item.location }</td>
-                        <td>{ item.date_and_time }</td>
+                        <td>{ item.date }</td>
+                        <td>{ item.time }</td>
                       </tr>
                     ))
                 }
@@ -168,17 +138,15 @@ class ContentAllBar extends Component {
     {/* /.content */}
     </div>
 
-    
 
-
-
-
-    
     )
   }
 }
 
+const mapStateToProps = state => ({ data: state.data });
+
+const mapDispatchToProps = dispatch =>
+  bindActionCreators({ requestApiData }, dispatch);
 
 
-
-export default ContentAllBar;
+export default connect(mapStateToProps, mapDispatchToProps)(ContentAllBar);

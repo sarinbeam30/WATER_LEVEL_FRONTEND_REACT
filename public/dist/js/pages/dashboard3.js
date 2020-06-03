@@ -48,7 +48,7 @@ function create_the_water_list(avg_num_1, avg_num_2, data_set){
   for(var x=0; x<7; x++)
   {    
     if(x >= 0 && x < 5){
-      data_set[x] == 0;
+      data_set[x] = 0;
     } else {
       data_set[5] = avg_num_1;
       data_set[6] = avg_num_2;
@@ -80,11 +80,11 @@ function add_date_label(){
  $(async function() {
   'use strict'
 
-  var $CALL_DATA = $('#CALL_DATA');
-  var $CALL_DATA = water_level_info_string;
 
-  var water_level_info_string = await httpGet(django_url);
-  var json_output = JSON.parse(water_level_info_string)
+  // var water_level_info_string = await httpGet(django_url);
+  // var json_output = JSON.parse(water_level_info_string)
+
+  // console.log(typeof json_output);
 
   // console.log('OUT : ' + json_output[0]['location']);  == 'KMITL'
   
@@ -105,7 +105,7 @@ function add_date_label(){
   // console.log("AVG_BANG_29 : " + avg_bangkapi_29_05_2020);
   var avg_bangkapi_30_05_2020 = calculate_avg_of_water_level(json_output, json_length, 'BANGKAPI', '30/05/2020');
   var WATER_LEVEL_DATA_LIST_BANGKAPI = create_the_water_list(avg_bangkapi_29_05_2020, avg_bangkapi_30_05_2020, DATA_SET_BANGKAPI);
-  console.log('BANGKAPI_LIST : ' + WATER_LEVEL_DATA_LIST_BANGKAPI);
+  // console.log('BANGKAPI_LIST : ' + WATER_LEVEL_DATA_LIST_BANGKAPI);
   
   //--------------------------------------------  LADPRAO --------------------------------------------
   var avg_ladprao_29_05_2020 = calculate_avg_of_water_level(json_output, json_length, 'LADPRAO', '29/05/2020');
@@ -187,7 +187,7 @@ function add_date_label(){
   // }
 
   var $AllsensorBarChart = $('#Allsensor-Barchart')
-  console.log('ALL SENSOR MA YOUNG');
+  // console.log('ALL SENSOR MA YOUNG');
   var $AllsensorBarChart  = new Chart($AllsensorBarChart, {
     type   : 'bar',
     data   : {
@@ -449,7 +449,7 @@ function add_date_label(){
  
   //THIS IS MOCKUP FOR LADPRAO GREEN BAR GRAPH, NOT REALLY USING
   var $OnesensorBarChartGreen = $('#Onesensor-BarchartGreen');
-  console.log('LADPRAO MA YOUNG');
+  // console.log('LADPRAO MA YOUNG');
   var OnesensorBarChartGreen  = new Chart($OnesensorBarChartGreen, {
     type   : 'bar',
     data   : {

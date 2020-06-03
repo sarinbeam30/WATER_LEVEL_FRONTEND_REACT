@@ -16,7 +16,7 @@ class MockupGreenBar extends Component {
     this._isMounted = true;
     this.loadData();
     //every 10s
-    setInterval(this.loadData, 10000);
+    // setInterval(this.loadData, 10000);
   }
 
   componentWillUnmount() {
