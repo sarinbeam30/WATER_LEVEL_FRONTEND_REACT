@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function ContentTestingLine() {
+export default function Home() {
     return (
         <div className="content-wrapper" style={{minHeight: '1203.6px'}}>
   {/* Content Header (Page header) */}
@@ -8,12 +8,16 @@ export default function ContentTestingLine() {
     <div className="container-fluid">
       <div className="row mb-2">
         <div className="col-sm-6">
-          <h1 className="m-0 text-dark">Bangkapi's sensor</h1>
+        <div style={{display: 'flex',  justifyContent:'center'}}>
+          <h1 className="m-0 text-dark">Welcome to Water Level Monitoring System</h1>
+          </div>
+         
+          
         </div>{/* /.col */}
         <div className="col-sm-6">
           <ol className="breadcrumb float-sm-right">
-            <li className="breadcrumb-item"><a href="#">Home</a></li>
-            <li className="breadcrumb-item active">viewing Bangkapi's sensor</li>
+            <li className="breadcrumb-item"><a href="./ContentHome">Home</a></li>
+            <li className="breadcrumb-item active">viewing cesium map</li>
           </ol>
         </div>{/* /.col */}
       </div>{/* /.row */}
@@ -21,130 +25,36 @@ export default function ContentTestingLine() {
   </div>
   {/* /.content-header */}
   {/* Main content */}
+  <div style={{display: 'flex',  justifyContent:'center'}}>
   <div className="content">
-      <div className="container-fluid">
-        <div className="row">
-          <div class="col-lg-6">
-            <div className="card">
-              <div className="card-header border-0">
-                <div className="d-flex justify-content-between">
-                  <h3 className="card-title">Water level</h3>
-                  <a href="javascript:void(0);">Change to bargraph</a>
-                </div>
-              </div>
-              <div className="card-body">
-                <div className="d-flex">
-                  <p className="d-flex flex-column">
-                    <span className="text-bold text-lg">3000 cm</span>
-                    <span>Highest Level</span>
-                  </p>
-                  <p className="ml-auto d-flex flex-column text-right">
-                    <span className="text-success">
-                      <i className="fas fa-arrow-up"></i>
-                    </span>
-                    <span className="text-muted">rising</span>
-                  </p>
-                </div>
-               
-
-                <div className="position-relative mb-4"><div className="chartjs-size-monitor"><div className="chartjs-size-monitor-expand"><div className /></div><div className="chartjs-size-monitor-shrink"><div className /></div></div>
-                <canvas id="visitors-chart" height={250} width={592} className="chartjs-render-monitor" style={{display: 'block', height: 200, width: 474}} />
-              </div>
-
-
-
-
-
-
-
-
-                <div className="d-flex flex-row justify-content-end">
-                  <span className="mr-2">
-                    <i className="fas fa-square text-primary"></i> Bangkapi
-                  </span>
-
-        
-                </div>
-              </div>
-            </div>
-        {/* /.col-md-6 */}
-        <div className="card">
+    <div className="container-fluid">
+      <div className="row">
+        <div className="col-lg-9.5">
+          <div className="card">
             <div className="card-header border-0">
-              <h3 className="card-title">Daily update</h3>
-              <div className="card-tools">
-              <a href="javascript:void(0);">Expand</a>
+                <p><b>Click a sensor on the map / dashboard to view collected data, or about the project to view related references.</b></p>
+              
+            </div>
+            <div className="card-body">
+              <div className="d-flex">
+                
               </div>
+              {/* /.d-flex */}
+              
+              <iframe src="https://krittangcharoenkijkul.github.io/Cesium-Resium-WaterLevel/" width="875" height="441"></iframe>
+              
+
+
+
+              
+              
             </div>
-            <div className="card-body table-responsive p-0">
-              <table className="table table-striped table-valign-middle">
-                <thead>
-                  <tr>
-                    <th>Height (cm)</th>
-                    <th>Turbidity (NTU)</th>
-                    <th>Date</th>
-                    <th>Time</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>                      
-                      120
-                    </td>
-                    <td>50 NTU</td>
-                    <td>
-                      12/02/2020
-                    </td>
-                    <td>
-                    9:00 am standard time
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      
-                      170 
-                    </td>
-                    <td>70 NTU</td>
-                    <td>
-                    11/02/2020
-                    </td>
-                    <td>
-                    9:00 am standard time
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                     
-                      140
-                    </td>
-                    <td>80 NTU</td>
-                    <td>
-                    11/02/2020
-                    </td>
-                    <td>
-                    9:00 am standard time
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      
-                      110
-                    </td>
-                    <td>90 NTU</td>
-                    <td>
-                    12/02/2020
-                    </td>
-                    <td>
-                    9:00 am standard time
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-         
-          {/* /.card */}          
+          </div>
+          
+          {/* /.card */}
         </div>
         {/* /.col-md-6 */}
-
+        
 
 
 
@@ -158,12 +68,5 @@ export default function ContentTestingLine() {
   {/* /.content */}
 </div>
 </div>
-
-
-
-
-       
-
-
     )
 }

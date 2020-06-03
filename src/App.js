@@ -6,7 +6,7 @@ import Footer from './components/Footer'
 import ContentAllBar from './components/ContentAllBar'
 import ContentHome from './components/ContentHome'
 import ContentOneBar from './components/ContentOneBar'
-import ContentTestingLine from './components/ContentTestingLine'
+import Home from './components/Home'
 
 import Slider from './components/Slider'
 import './slide.css'
@@ -36,14 +36,14 @@ export default function App() {
               <Route path="/ContentAllBar" component={ContentAllBar} />
 
               {/* HOME */}
-              <Route exact path={"/"} component={ContentHome} />
+              <Route exact path={"/"} component={Home} />
 
               {/* LADKRABANG */}
               <Route path={"/ContentOneBar"} component={ContentOneBar} />
 
               {/* ABOUT_THE_PROJECT */}
               <Route path={"/Slider"} component={Slider} />
-              <Route path={"/ContentTestingLine"} component={ContentTestingLine} />
+              
 
               {/* LADPRAO */}
               <Route path={"/MockupGreenBar"} component={MockupGreenBar} />
