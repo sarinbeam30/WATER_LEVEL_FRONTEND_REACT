@@ -1,4 +1,4 @@
-import { call, put, takeEvery, takeLatest } from "redux-saga/effects";
+import { call, put, takeLatest } from "redux-saga/effects";
 
 import { REQUEST_API_DATA, receiveApiData } from "./actions";
 import { fetchData } from "./api";
@@ -11,9 +11,9 @@ function* getApiData(action) {
       // do api call
       const data = yield call(fetchData);
       yield put(receiveApiData(data));
-      //call_api_every_10_second
-      yield delay(100000);
-      // console.log('test');
+      //call_api_every_20_second
+      yield delay(20000);
+      console.log('RELOAD');
   
     } catch (e) {
       console.log(e);

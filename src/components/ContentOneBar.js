@@ -7,8 +7,8 @@ import { requestApiData } from "../actions";
 
 class ContentOneBar extends Component {
   
-  async componentDidMount(){
-    await this.props.requestApiData();
+  componentDidMount(){
+    this.props.requestApiData();
   }
 
   render(){
