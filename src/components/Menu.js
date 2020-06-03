@@ -1,11 +1,12 @@
 import React from 'react'
+import Waterlevelicon from '../../public/dist/waterlevelicon.png'
 
 export default function Menu() {
     return (
         <aside className="main-sidebar sidebar-dark-primary elevation-4">
   {/* Brand Logo */}
   <a href="#/" className="brand-link">
-    <img src="dist/img/Waterlevelicon.png" alt="WaterLevel Logo" className="brand-image img-circle elevation-3" style={{opacity: '.8'}} />
+    <img src="{Waterlevelicon}" alt="WaterLevel Logo" className="brand-image img-circle elevation-3" style={{opacity: '.8'}} />
     <span className="brand-text font-weight-light">Water Level tracker</span>
   </a>
   {/* Sidebar */}
