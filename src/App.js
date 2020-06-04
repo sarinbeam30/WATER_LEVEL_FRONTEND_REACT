@@ -7,6 +7,9 @@ import ContentAllBar from './components/ContentAllBar'
 import ContentHome from './components/ContentHome'
 import ContentOneBar from './components/ContentOneBar'
 import Home from './components/Home'
+import ContentTableLadkrabang from './components/ContentTableLadkrabang'
+import ContentTableBangkapi from './components/ContentTableBangkapi'
+import ContentTableLadprao from './components/ContetnTableLadprao'
 
 import Slider from './components/Slider'
 import './slide.css'
@@ -31,25 +34,34 @@ export default function App() {
 
             <HashRouter>
             <Switch>
-              
-              {/* GRAPH_VIEW */} 
-              <Route path="/ContentAllBar" component={ContentAllBar} />
 
               {/* HOME */}
               <Route exact path={"/"} component={Home} />
-
-              {/* LADKRABANG */}
-              <Route path={"/ContentOneBar"} component={ContentOneBar} />
-
+              
+              {/* GRAPH_VIEW */} 
+              <Route path="/ContentAllBar" component={ContentAllBar} />
+             
               {/* ABOUT_THE_PROJECT */}
               <Route path={"/Slider"} component={Slider} />
-              
 
-              {/* LADPRAO */}
+               {/* CHART_LADKRABANG */}
+               <Route path={"/ContentOneBar"} component={ContentOneBar} />
+
+              {/* CHART_LADPRAO */}
               <Route path={"/MockupGreenBar"} component={MockupGreenBar} />
 
-              {/* BANGKAPI */}
+              {/* CHART_BANGKAPI */}
               <Route path={"/MockupRedBar"} component={MockupRedBar} />
+
+              {/* TABLE_LADKRABANG */}
+              <Route path={"/ContentTableLadkrabang"} component={ContentTableLadkrabang} />
+
+              {/* TABLE_BANGKAPI */}
+              <Route path={"/ContentTableBangkapi"} component={ContentTableBangkapi} />
+
+              {/* TABLE_LADPRAO */}
+              <Route path={"/ContentTableLadprao"} component={ContentTableLadprao} />
+
 
             </Switch>
             </HashRouter>

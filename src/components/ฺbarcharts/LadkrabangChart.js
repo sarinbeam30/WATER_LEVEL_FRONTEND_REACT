@@ -24,10 +24,16 @@ class LadkrabangChart extends Component {
                                     borderColor: 'rgba(0,0,0,1)',
                                     borderWidth: 1,
                                     barPercentage: 0.65,
-                                    data :[0,0,0,0,0,0,
+                                    data :[0,0,0,0,0,
                                         calculate_avg_of_water_level_new_version(
                                             Array.from(this.props.data)
                                             .filter(item => item.location === "LADKRABANG" && item.date === "03/06/2020")
+                                            .map(item => (item.water_level))
+                                        )
+                                        ,
+                                        calculate_avg_of_water_level_new_version(
+                                            Array.from(this.props.data)
+                                            .filter(item => item.location === "LADKRABANG" && item.date === "04/06/2020")
                                             .map(item => (item.water_level))
                                         )
                                     ]
@@ -35,7 +41,7 @@ class LadkrabangChart extends Component {
                             ]
                         }}
                         options={{
-                            maintainAspectRatio: false,
+                            maintainAspectRatio: true,
                             legend:{
                                 display:false,
                             },

@@ -19,12 +19,12 @@ class MockupGreenBar extends Component {
     <div className="container-fluid">
       <div className="row mb-2">
         <div className="col-sm-6">
-          <h1 className="m-0 text-dark">Ladprao's Sensor (VIRTUAL_SENSOR)</h1>
+          <h1 className="m-0 text-dark">Ladprao's sensor (VIRTUAL_SENSOR) bar chart</h1>
         </div>{/* /.col */}
         <div className="col-sm-6">
           <ol className="breadcrumb float-sm-right">
             <li className="breadcrumb-item"><a href="#/">Home</a></li>
-            <li className="breadcrumb-item active">viewing Ladprao's sensor</li>
+            <li className="breadcrumb-item active">viewing Ladprao's sensor bar chart</li>
           </ol>
         </div>{/* /.col */}
       </div>{/* /.row */}
@@ -40,7 +40,7 @@ class MockupGreenBar extends Component {
             <div className="card-header border-0">
               <div className="d-flex justify-content-between">
                 <h3 className="card-title">Water level average ( %)</h3>
-                <a href="javascript:void(0);">Mockup cant Change to linegraph</a>
+                {/* <a href="javascript:void(0);">Mockup cant Change to linegraph</a> */}
               </div>
             </div>
             <div className="card-body">
@@ -75,40 +75,7 @@ class MockupGreenBar extends Component {
           {/* /.card */}
         </div>
         {/* /.col-md-6 */}
-        <div className="card">
-            <div className="card-header border-0">
-              <h3 className="card-title">Daily update</h3>
-              <div className="card-tools">
-              <a href="./ContentHome">Expand</a>
-              </div>
-            </div>
-            <div className="card-body table-responsive p-0">
-              <table className="table table-striped table-valign-middle">
-                <thead>
-                  <tr>
-                      <th>WATER LEVEL ( %)</th>
-                      <th>Date</th>
-                      <th>Time</th>
-                  </tr>
-                </thead>
-                <tbody>
-                {
-                  Array.from(this.props.data)
-                  .filter(item => item.location === "LADPRAO")
-                  .slice(-5).reverse().map(item => (
-                    <tr key={item.id}>
-                        <td>{item.water_level}</td>
-                        <td>{ item.date }</td>
-                        <td>{ item.time }</td>
-                    </tr>
-                  ))
-                }
-                </tbody>
-              </table>
-            </div>
-        
-          {/* /.card */}          
-        </div>
+
         {/* /.col-md-6 */}
     
     

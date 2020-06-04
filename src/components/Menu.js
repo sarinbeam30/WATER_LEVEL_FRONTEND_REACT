@@ -58,19 +58,19 @@ export default function Menu() {
           </a>
           <ul className="nav nav-treeview">
             <li className="nav-item">
-              <a href="#/ContentOneBar" className="nav-link">
+              <a href="#/ContentTableLadkrabang" className="nav-link">
                 <i className="far fa-circle nav-icon" />
                 <p>Ladkrabang</p>
               </a>
             </li>
             <li className="nav-item">
-              <a href="#/MockupRedBar" className="nav-link">
+              <a href="#/ContentTableBangkapi" className="nav-link">
                 <i className="far fa-circle nav-icon" />
                 <p>Bangkapi</p>
               </a>
             </li>
             <li className="nav-item">
-              <a href="#/MockupGreenBar" className="nav-link">
+              <a href="#/ContentTableLadprao" className="nav-link">
                 <i className="far fa-circle nav-icon" />
                 <p>Ladprao</p>
               </a>

@@ -18,9 +18,9 @@ export default function Header() {
     <li className="nav-item d-none d-sm-inline-block">
       <a href="#/Slider" className="nav-link">About the Project</a>
     </li>
-    <li className="nav-item d-none d-sm-inline-block">
+    {/* <li className="nav-item d-none d-sm-inline-block">
       <a href="#/ContentAllBar" className="nav-link">TESTING_MY_DUDES</a>
-    </li>
+    </li> */}
   </ul>
  
   

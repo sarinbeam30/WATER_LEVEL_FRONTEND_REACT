@@ -42,7 +42,7 @@ class ContentAllBar extends Component {
             <div className="card-header border-0">
               <div className="d-flex justify-content-between">
                 <h3 className="card-title">Water level average ( %)</h3>
-                <a href="./ContentAllLine">Change to linegraph</a>
+                {/* <a href="./ContentAllLine">Change to linegraph</a> */}
               </div>
             </div>
             <div className="card-body">
@@ -106,7 +106,7 @@ class ContentAllBar extends Component {
                 </thead>
                 <tbody>
                 {
-                    Array.from(this.props.data).slice(-5).reverse().map(item => (
+                    Array.from(this.props.data).slice(-7).reverse().map(item => (
                       <tr key={item.id}>
                         <td>{item.sensor}</td>
                         <td>{item.water_level}</td>
