@@ -1,4 +1,4 @@
-const api_url = "http://django-env.eba-cwpa3c9w.ap-southeast-1.elasticbeanstalk.com"
+const api_url = "https://django-env.eba-cwpa3c9w.ap-southeast-1.elasticbeanstalk.com"
 export const fetchData = async () => {
   try {
     const response = await fetch(api_url);

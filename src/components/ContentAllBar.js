@@ -90,7 +90,7 @@ class ContentAllBar extends Component {
             <div className="card-header border-0">
               <h3 className="card-title">Daily update</h3>
               <div className="card-tools">
-              <a href="./ContentHome">Expand</a>
+              {/* <a href="./ContentHome">Expand</a> */}
               </div>
             </div>
             <div className="card-body table-responsive p-0">

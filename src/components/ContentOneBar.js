@@ -40,7 +40,7 @@ class ContentOneBar extends Component {
           <div className="card-header border-0">
             <div className="d-flex justify-content-between">
               <h3 className="card-title">Water level average ( %)</h3>
-              <a href="./ContentOneLine">Change to linegraph</a>
+              {/* <a href="./ContentOneLine">Change to linegraph</a> */}
             </div>
           </div>
           <div className="card-body">
