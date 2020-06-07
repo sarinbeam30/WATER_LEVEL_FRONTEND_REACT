@@ -11,8 +11,8 @@ function* getApiData(action) {
       // do api call
       const data = yield call(fetchData);
       yield put(receiveApiData(data));
-      //call_api_every_20_second
-      yield delay(20000);
+      //call_api_every_120_second
+      yield delay(120000);
       console.log('RELOAD');
   
     } catch (e) {

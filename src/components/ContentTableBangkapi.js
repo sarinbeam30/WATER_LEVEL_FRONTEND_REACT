@@ -34,45 +34,42 @@ class ContentTableBangkapi extends Component {
 <div className="content">
   <div className="container-fluid">
     <div className="row">
-
-      {/* /.col-md-6 */}
-      <div className="card">
-          <div className="card-header border-0">
-            <h3 className="card-title">Daily update</h3>
-            <div className="card-tools">
-            {/* <a href="./ContentHome">Expand</a> */}
-            </div>
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header  border-dark">
+            <h3 class="card-title">Daily update</h3>
           </div>
-          <div className="card-body table-responsive p-0">
-            <table className="table table-striped table-valign-middle">
+
+          <div class="card-body">
+            <table id="example1" class="table table-bordered table-striped">
               <thead>
                 <tr>
-                  <th>WATER LEVEL ( %)</th>
-                  <th>Date</th>
-                  <th>Time</th>
+                  <th>WATER LEVEL (%)</th>
+                  <th>DATE</th>
+                  <th>TIME</th>
+
                 </tr>
               </thead>
-              <tbody>
-              {
-                Array.from(this.props.data)
-                .filter(item => item.location === "BANGKAPI")
-                .slice(-8).reverse().map(item => (
-                  <tr key={item.id}>
-                      <td>{item.water_level}</td>
-                      <td>{ item.date }</td>
-                      <td>{ item.time }</td>
-                  </tr>
-                ))
-              }
-              </tbody>
-              
+                <tbody>
+                {
+                  Array.from(this.props.data)
+                  .filter(item => item.location === "BANGKAPI")
+                  .slice(-20).reverse()
+                  .map(item => (
+                    <tr key={item.id}>
+                        <td>{item.water_level}</td>
+                        <td>{ item.date }</td>
+                        <td>{ item.time }</td>
+                    </tr>
+                  ))
+                }
+                </tbody>
             </table>
           </div>
-       
-        {/* /.card */}          
-      </div>
-      {/* /.col-md-6 */}
-      
+
+
+        </div>
+      </div>      
     </div>
     {/* /.row */}
   </div>

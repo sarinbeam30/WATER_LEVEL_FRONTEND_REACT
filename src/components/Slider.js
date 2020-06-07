@@ -19,21 +19,20 @@ const slideImages = [
     return (
         
         <div className="content-wrapper" >
-            <Slide {...properties}>
-        <div className="each-slide">
-          <div style={{'backgroundImage': `url(${slideImages[0]})`}}>
-        </div>
-        </div>
-        <div className="each-slide">
-          <div style={{'backgroundImage': `url(${slideImages[1]})`}}>
-        </div>
-        </div>
-        <div className="each-slide">
-          <div style={{'backgroundImage': `url(${slideImages[2]})`}}>
-        </div>
-        </div>
-      </Slide>
-            <b><p>2011 Thailand flood</p></b>
+          <Slide {...properties}>
+            <div className="each-slide">
+              <div style={{'backgroundImage': `url(${slideImages[0]})`}}></div>
+            </div>
+            <div className="each-slide">
+              <div style={{'backgroundImage': `url(${slideImages[1]})`}}></div>
+            </div>
+            <div className="each-slide">
+              <div style={{'backgroundImage': `url(${slideImages[2]})`}}></div>
+            </div>
+          </Slide>
+          
+          <div class="content" style={{ margin: '1% 1% 0px 1%'}}>
+                <b><p>2011 Thailand flood</p></b>
                 <p>	Flooding is a main issue of many cities,especially those that reside below the sea level, Bangkok which is one of those cities
                     suffered a huge damaged from one of the greatest flood since it’s founding back in year 2011.
                 </p>
@@ -50,7 +49,7 @@ const slideImages = [
                 <b><p>Risk of flood</p></b>
                 <p>	Bangkok's tendency to flood is particularly acute. Bangkok and adjacent provinces are only 50 cm to two meters above sea level. Sea levels are rising four mm every year. 
                     The rising sea levels push more water into the Chao Phraya River. To combat rising sea levels a barrier dam stretching from Chonburi to Hua Hin has been proposed, at a cost of 500 billion baht.
-                    <p><img src="dist/img/26floodmap.jpg" className="offset-3" alt="User Image" /></p>
+                    <p style={{textAlign:'center'}}><img src="dist/img/26floodmap.jpg" className="offset-3" alt="User Image" style={{margin:'1.25% 0%'}} /></p>
 
                     The three-meter high dykes that sequester the river are subsiding, as is the rest of the city. In the past, some areas of Bangkok were sinking as much as three centimeters per year, due to excessive groundwater extraction.
                     Groundwater extraction was halted in 1977. That step has slowed subsidence to about one centimeter per year on average. However, the sheer weight of Bangkok's ever expanding infrastructure has exacerbated the problem. 
@@ -68,7 +67,7 @@ const slideImages = [
                     website</b> to be a tool in helping those in need, or those who are in charge of looking after our sewage syastem
                     , to have the ability to better oversee what is happening beneath us and use that knowledge to prevent another catastrophe.
                 </p>
-        
+          </div>
         </div>
         
         

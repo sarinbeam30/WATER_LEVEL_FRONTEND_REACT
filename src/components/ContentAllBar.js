@@ -33,7 +33,9 @@ class ContentAllBar extends Component {
     </div>{/* /.container-fluid */}
     </div>
     {/* /.content-header */}
-    {/* Main content */}
+
+    <div class='col-12'>
+           {/* Main content */}
     <div className="content">
     <div className="container-fluid">
       <div className="row">
@@ -46,20 +48,6 @@ class ContentAllBar extends Component {
               </div>
             </div>
             <div className="card-body">
-              {/* <div className="d-flex">
-                <p className="d-flex flex-column">
-                  <span className="text-bold text-lg">6000 cm</span>
-                  <span>Highest level</span>
-                </p>
-                <p className="ml-auto d-flex flex-column text-right">
-                  <span className="text-success">
-                    <i className="fas fa-arrow-up" /> 
-                  </span>
-                  <span className="text-muted">rising</span>
-                </p>
-              </div> */}
-    
-              {/* /.d-flex */}
 
               <div className="position-relative mb-4">
                 <div className="chartjs-size-monitor">
@@ -81,48 +69,51 @@ class ContentAllBar extends Component {
                 </span>
               </div>
             </div>
+
           </div>
           
           {/* /.card */}
         </div>
-        {/* /.col-md-6 */}
-        <div className="card">
-            <div className="card-header border-0">
-              <h3 className="card-title">Daily update</h3>
-              <div className="card-tools">
-              {/* <a href="./ContentHome">Expand</a> */}
+        <div class="col-lg-6">
+          <div className="card">
+              <div className="card-header border-0">
+                <h3 className="card-title">Daily update</h3>
+                <div className="card-tools">
+                {/* <a href="./ContentHome">Expand</a> */}
+                </div>
               </div>
-            </div>
-            <div className="card-body table-responsive p-0">
-              <table className="table table-striped table-valign-middle">
-                <thead>
-                  <tr>
-                    <th>SENSOR</th>
-                    <th>WATER LEVEL ( %)</th>
-                    <th>LOCATION</th>
-                    <th>Date</th>
-                    <th>Time</th>
-                  </tr>
-                </thead>
-                <tbody>
-                {
-                    Array.from(this.props.data).slice(-7).reverse().map(item => (
-                      <tr key={item.id}>
-                        <td>{item.sensor}</td>
-                        <td>{item.water_level}</td>
-                        <td>{ item.location }</td>
-                        <td>{ item.date }</td>
-                        <td>{ item.time }</td>
-                      </tr>
-                    ))
-                }
-                </tbody>
-              </table>
-            </div>
-        
-          {/* /.card */}          
+              <div className="card-body table-responsive p-0">
+                <table className="table table-striped table-valign-middle">
+                  <thead>
+                    <tr>
+                      <th>SENSOR</th>
+                      <th>WATER LEVEL ( %)</th>
+                      <th>LOCATION</th>
+                      <th>Date</th>
+                      <th>Time</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {
+                      Array.from(this.props.data).slice(-7).reverse().map(item => (
+                        <tr key={item.id}>
+                          <td>{item.sensor}</td>
+                          <td>{item.water_level}</td>
+                          <td>{ item.location }</td>
+                          <td>{ item.date }</td>
+                          <td>{ item.time }</td>
+                        </tr>
+                      ))
+                  }
+                  </tbody>
+                </table>
+              </div>
+          
+            {/* /.card */}          
+          </div>
         </div>
-        {/* /.col-md-6 */}
+
+        
     
         
       </div>
@@ -131,6 +122,8 @@ class ContentAllBar extends Component {
     {/* /.container-fluid */}
     </div>
     {/* /.content */}
+    </div>
+ 
     </div>
 
 
