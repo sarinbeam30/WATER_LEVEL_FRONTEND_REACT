@@ -42,7 +42,7 @@ export default function Home() {
               {/* /.d-flex */}
               
               {/* <iframe src="http://localhost:3007/Cesium-Resium-WaterLevel/" width="875" height="441"></iframe> */}
-              <iframe src="https://krittangcharoenkijkul.github.io/Cesium-Resium-WaterLevel/" width="875" height="441"></iframe>
+              <iframe src="https://krittangcharoenkijkul.github.io/Cesium-Resium-WaterLevel/" width="940" height="475"></iframe>
 
 
 
