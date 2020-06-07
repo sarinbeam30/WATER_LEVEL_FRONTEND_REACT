@@ -69,7 +69,7 @@ class ContentTableLadkrabang extends Component {
                     <table id="example1" class="table table-bordered table-striped">
                       <thead>
                         <tr>
-                          <th>WATER LEVEL (%)</th>
+                          <th>WATER LEVEL ( mm)</th>
                           <th>DATE</th>
                           <th>TIME</th>
 

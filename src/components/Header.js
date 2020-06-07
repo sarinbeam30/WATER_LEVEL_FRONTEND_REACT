@@ -13,7 +13,7 @@ export default function Header() {
       <a href="#/" className="nav-link">Home</a>
     </li>
     <li className="nav-item d-none d-sm-inline-block">
-      <a href="#/ContentAllBar" className="nav-link">Graph View</a>
+      <a href="#/ContentAllBar" className="nav-link">Dash board</a>
     </li>
     <li className="nav-item d-none d-sm-inline-block">
       <a href="#/Slider" className="nav-link">About the Project</a>
