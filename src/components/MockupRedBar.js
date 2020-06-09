@@ -39,7 +39,7 @@ class MockupRedBar extends Component {
           <div className="card">
             <div className="card-header border-0">
               <div className="d-flex justify-content-between">
-                <h3 className="card-title">Water level average ( %)</h3>
+                <h3 className="card-title">Water level average ( mm)</h3>
                 {/* <a href="javascript:void(0);">Mockup cant Change to linegraph</a> */}
               </div>
             </div>

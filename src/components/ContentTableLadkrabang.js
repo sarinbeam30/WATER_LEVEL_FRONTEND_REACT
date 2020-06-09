@@ -20,7 +20,7 @@ class ContentTableLadkrabang extends Component {
 
   componentWillMount(){
     this.props.requestApiData();
-    console.log(this.props.data);
+    // console.log(this.props.data);
   }
 
   componentDidMount(){
@@ -28,7 +28,7 @@ class ContentTableLadkrabang extends Component {
     // this.setState({
     //   water_level : this.props.data
     // })
-    console.log(this.props.data);
+    // console.log(this.props.data);
   }
 
   render(){
